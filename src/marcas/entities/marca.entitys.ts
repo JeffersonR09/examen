@@ -1,9 +1,9 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Product {
+export class Marca {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column({ type: 'text', unique: true })
   name: string;
@@ -14,6 +14,6 @@ export class Product {
   @Column({ type: 'text', unique: true })
   pais_origen: string;
 
-  @Column({ type: 'numeric', default: 0, nullable: true })
+  @Column({ type: 'text', nullable: true })
   observaciones?: string;
 }
